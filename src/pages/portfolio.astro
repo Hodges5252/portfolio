@@ -1,41 +1,46 @@
 ---
+import { PORTFOLIO } from '../lib/constants'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
-//import ProjectCard from '../components/ProjectCard.astro'
 
-
-interface Project {
-  contentTypeId: 'Projects'
-  fields: {
-    //name: EntryFieldTypes.Text
-    //img: EntryFieldTypes.AssetLink
-    //website: EntryFieldTypes.EntryResourceLink<any>
-    //repositorio: EntryFieldTypes.EntryResourceLink<any>
-  }
-}
-
-//const entries = await contentfulClient.getEntries<Project>({})
+import { PROJECTS } from '../lib/constants'
 ---
 
-<BaseLayout
-  title="Portfolio"
-  description="Projects and some clone's that I did"
->
+<BaseLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
   <main class="flex min-h-[80vh] flex-auto flex-col">
     <TopLayout>
       <h2
-        class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+          class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
       >
-        Projects and clone's
+        {PROJECTS.TITLE}
       </h2>
     </TopLayout>
     <BottomLayout>
-      <div class="flex w-full flex-wrap justify-center gap-2">
+      <ul>
         {
+          PORTFOLIO.map((entry) => (
+              <li class="animate mt-4 border-b border-black/10 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none dark:border-white/25">
 
+                <a
+                    href={entry.link ?? ''}
+                    class={`font-semibold ${entry?.link ? 'text-primary' : 'text-foreground'}`}
+                >
+                  {entry.name}
+                </a>
+                <div class="text-sm text-gray-600">
+                  Languages: {entry.languages.map((i) => (<>{i} </>))}
+                </div>
+
+                <article class="prose dark:prose-invert">
+                  {entry.description.map((i) => (
+                      <>{i}<div></div></>
+                  ))}
+                </article>
+              </li>
+          ))
         }
-      </div>
+      </ul>
     </BottomLayout>
   </main>
 </BaseLayout>

@@ -1,8 +1,13 @@
 ---
 import Card from '../Card.astro'
-import Pulse from '../Pulse.astro'
+import TimeZoneV2 from './TimeZoneCardV2'
 ---
 
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Time Zone">
+  <TimeZoneV2 timezone="America/Boise" client:load />
+</Card>
+
+<!--
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
   <div class="mb-2 flex w-full items-start justify-between">
     <div class="flex flex-col">
@@ -14,4 +19,4 @@ import Pulse from '../Pulse.astro'
     <Pulse />
   </div>
   <p class="text-xs">Currently working as freelancer</p>
-</Card>
+</Card> -->

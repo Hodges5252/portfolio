@@ -1,5 +1,6 @@
 ---
 import { buttonVariants } from './ui/button'
+import { ModeToggle } from './ui/ThemeToggle'
 ---
 
 <script is:inline>
@@ -37,7 +38,7 @@ import { buttonVariants } from './ui/button'
         >
           GitHub
         </a>
-
+        <ModeToggle transition:persist client:load />
       </nav>
     </div>
   </div>

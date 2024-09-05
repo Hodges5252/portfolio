@@ -17,9 +17,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.3(@types/node@20.16.5)(rollup@4.21.2)(typescript@5.5.4))(tailwindcss@3.4.10)
-      '@contentful/rich-text-html-renderer':
-        specifier: ^16.3.5
-        version: 16.6.9
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
         version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -35,9 +32,6 @@ importers:
       clsx:
         specifier: ^2.1.0
         version: 2.1.1
-      contentful:
-        specifier: ^10.8.6
-        version: 10.15.0
       lucide-react:
         specifier: ^0.363.0
         version: 0.363.0(react@18.3.1)
@@ -256,17 +250,6 @@ packages:
   '@babel/types@7.25.6':
     resolution: {integrity: sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==}
     engines: {node: '>=6.9.0'}
-
-  '@contentful/content-source-maps@0.11.2':
-    resolution: {integrity: sha512-N85VAzEaeQw7tQq3++BksYoHafsXQjmDpeK+Eo6eBcy7Zi6Uwph9gHbaJ0c/vuTig1PtKEVDwzg2tbtQJWWxSg==}
-
-  '@contentful/rich-text-html-renderer@16.6.9':
-    resolution: {integrity: sha512-Ug1m1jL4R+16CRZtpAjiQoWgn1YF5j1VfUtwOtUcazD23my8OhjljyhsNotCZEPKKcRLhAevCBIt9N0OIFDLnw==}
-    engines: {node: '>=6.0.0'}
-
-  '@contentful/rich-text-types@16.8.4':
-    resolution: {integrity: sha512-EZ9438DQS+bU8N39qjT1c3TqadP3F71tXJeMKOqYzQetvpP5U9iHEF1jl5RB+0fWfvI6xHiHsiUOWCqC9bR39A==}
-    engines: {node: '>=6.0.0'}
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -1258,18 +1241,6 @@ packages:
 
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
-
-  contentful-resolve-response@1.9.0:
-    resolution: {integrity: sha512-LtgPx/eREpHXOX82od48zFZbFhXzYw/NfUoYK4Qf1OaKpLzmYPE4cAY4aD+rxVgnMM5JN/mQaPCsofUlJRYEUA==}
-    engines: {node: '>=4.7.2'}
-
-  contentful-sdk-core@8.3.1:
-    resolution: {integrity: sha512-HYy4ecFA76ERxz7P0jW7hgDcL8jH+bRckv2QfAwQ4k1yPP9TvxpZwrKnlLM69JOStxVkCXP37HvbjbFnjcoWdg==}
-    engines: {node: '>=18'}
-
-  contentful@10.15.0:
-    resolution: {integrity: sha512-gkkMRf2FK1SQHMs2UKOuIeCdBXQKF/fMzIRCDL038lUScyE6mvnPu8aHrAQuUZwfcd58J0cibqT+iqj+pAVyGA==}
-    engines: {node: '>=18'}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -3085,18 +3056,6 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
-  '@contentful/content-source-maps@0.11.2':
-    dependencies:
-      '@vercel/stega': 0.1.2
-      json-pointer: 0.6.2
-
-  '@contentful/rich-text-html-renderer@16.6.9':
-    dependencies:
-      '@contentful/rich-text-types': 16.8.4
-      escape-html: 1.0.3
-
-  '@contentful/rich-text-types@16.8.4': {}
-
   '@emmetio/abbreviation@2.3.3':
     dependencies:
       '@emmetio/scanner': 1.0.4
@@ -4072,30 +4031,6 @@ snapshots:
   commander@4.1.1: {}
 
   common-ancestor-path@1.0.1: {}
-
-  #contentful-resolve-response@1.9.0:
-    #dependencies:
-      #fast-copy: 2.1.7
-
-  #contentful-sdk-core@8.3.1:
-    #dependencies:
-      #fast-copy: 2.1.7
-      #lodash.isplainobject: 4.0.6
-      #lodash.isstring: 4.0.1
-      #p-throttle: 4.1.1
-      #qs: 6.13.0
-
-  #contentful@10.15.0:
-    #dependencies:
-      #'@contentful/content-source-maps': 0.11.2
-      #'@contentful/rich-text-types': 16.8.4
-      #axios: 1.7.7
-      #contentful-resolve-response: 1.9.0
-      #contentful-sdk-core: 8.3.1
-      #json-stringify-safe: 5.0.1
-      #type-fest: 4.26.0
-    #transitivePeerDependencies:
-      #- debug
 
   convert-source-map@2.0.0: {}
 

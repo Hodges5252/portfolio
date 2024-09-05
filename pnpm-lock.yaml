@@ -4073,29 +4073,29 @@ snapshots:
 
   common-ancestor-path@1.0.1: {}
 
-  contentful-resolve-response@1.9.0:
-    dependencies:
-      fast-copy: 2.1.7
+  #contentful-resolve-response@1.9.0:
+    #dependencies:
+      #fast-copy: 2.1.7
 
-  contentful-sdk-core@8.3.1:
-    dependencies:
-      fast-copy: 2.1.7
-      lodash.isplainobject: 4.0.6
-      lodash.isstring: 4.0.1
-      p-throttle: 4.1.1
-      qs: 6.13.0
+  #contentful-sdk-core@8.3.1:
+    #dependencies:
+      #fast-copy: 2.1.7
+      #lodash.isplainobject: 4.0.6
+      #lodash.isstring: 4.0.1
+      #p-throttle: 4.1.1
+      #qs: 6.13.0
 
-  contentful@10.15.0:
-    dependencies:
-      '@contentful/content-source-maps': 0.11.2
-      '@contentful/rich-text-types': 16.8.4
-      axios: 1.7.7
-      contentful-resolve-response: 1.9.0
-      contentful-sdk-core: 8.3.1
-      json-stringify-safe: 5.0.1
-      type-fest: 4.26.0
-    transitivePeerDependencies:
-      - debug
+  #contentful@10.15.0:
+    #dependencies:
+      #'@contentful/content-source-maps': 0.11.2
+      #'@contentful/rich-text-types': 16.8.4
+      #axios: 1.7.7
+      #contentful-resolve-response: 1.9.0
+      #contentful-sdk-core: 8.3.1
+      #json-stringify-safe: 5.0.1
+      #type-fest: 4.26.0
+    #transitivePeerDependencies:
+      #- debug
 
   convert-source-map@2.0.0: {}
 

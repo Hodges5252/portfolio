@@ -15,8 +15,13 @@ export function ModeToggle() {
   )
 
   React.useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains('dark')
-    setThemeState(isDarkMode ? 'dark' : 'light')
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null;
+    if (savedTheme) {
+      setThemeState(savedTheme)
+    } else {
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+      setThemeState(prefersDarkMode ? 'dark' : 'light')
+    }
   }, [])
 
   React.useEffect(() => {

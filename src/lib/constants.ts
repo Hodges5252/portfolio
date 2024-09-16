@@ -9,7 +9,7 @@ export const loaderAnimation = [
 export const LINKS = {
   github: 'https://github.com/Hodges5252',
   linkedin: 'https://www.linkedin.com/in/ethanhodges52/',
-  mail: 'mailto:ethanhodges5252@gmail.com@gmail.com',
+  mail: 'mailto:ethanhodges5252@gmail.com',
   game: 'https://salchworks.itch.io/in-the-shadow-of-stars'
 }
 
